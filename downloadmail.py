@@ -14,9 +14,9 @@ from email.header import Header
  
  
 # 输入邮件地址, 口令和POP3服务器地址:
-user = '1670142089@qq.com'
-password = 'vxlcknjcsflrdaac'
-pop3_server = 'pop.qq.com'
+user = '123456789@qq.com'
+password = 'yoursecret'
+host = 'pop.qq.com'
 
 # 输入存储文件地址:
 direction =  '/Users/Visionary/Desktop/homework/'
@@ -134,7 +134,7 @@ def connectServer(user, password, host):
         
             
 if __name__ == '__main__':
-    server = connectServer(user, password, pop3_server)
+    server = connectServer(user, password, host)
     mails = getMails(server)
     for i in mails:
         getFile(i, direction)
